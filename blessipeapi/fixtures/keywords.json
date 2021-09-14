@@ -390,5 +390,61 @@
     "fields": {
       "word": "churrasco"
     }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 55,
+    "fields": {
+      "word": "australian"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 56,
+    "fields": {
+      "word": "irish"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 57,
+    "fields": {
+      "word": "british"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 58,
+    "fields": {
+      "word": "southern"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 59,
+    "fields": {
+      "word": "tartare"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 60,
+    "fields": {
+      "word": "trout"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 61,
+    "fields": {
+      "word": "branzino"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 62,
+    "fields": {
+      "word": "confit"
+    }
   }
 ]
