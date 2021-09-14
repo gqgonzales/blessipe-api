@@ -236,5 +236,103 @@
     "fields": {
       "word": "spanish"
     }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 35,
+    "fields": {
+      "word": "japanese"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 36,
+    "fields": {
+      "word": "steak"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 37,
+    "fields": {
+      "word": "steakhouse"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 38,
+    "fields": {
+      "word": "american"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 39,
+    "fields": {
+      "word": "brunch"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 40,
+    "fields": {
+      "word": "tacos"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 41,
+    "fields": {
+      "word": "bar"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 42,
+    "fields": {
+      "word": "latin"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 43,
+    "fields": {
+      "word": "english"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 44,
+    "fields": {
+      "word": "pub"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 45,
+    "fields": {
+      "word": "ethiopian"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 46,
+    "fields": {
+      "word": "african"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 46,
+    "fields": {
+      "word": "sandwich"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 47,
+    "fields": {
+      "word": "south american"
+    }
   }
 ]
