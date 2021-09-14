@@ -334,5 +334,61 @@
     "fields": {
       "word": "south american"
     }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 48,
+    "fields": {
+      "word": "tapas"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 49,
+    "fields": {
+      "word": "pinchos"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 50,
+    "fields": {
+      "word": "small plates"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 51,
+    "fields": {
+      "word": "mediterranean"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 52,
+    "fields": {
+      "word": "buns"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 53,
+    "fields": {
+      "word": "ramen"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 53,
+    "fields": {
+      "word": "italian"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 54,
+    "fields": {
+      "word": "churrasco"
+    }
   }
 ]

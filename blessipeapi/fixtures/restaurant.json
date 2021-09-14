@@ -124,7 +124,7 @@
     "model": "blessipeapi.restaurant",
     "pk": 12,
     "fields": {
-      "name": "THe Yellow Porch",
+      "name": "The Yellow Porch",
       "address": "734 Thompson Ln, Nashville, TN 37204",
       "phone_number": "+1-615-386-0260",
       "url": "https://www.theyellowporch.com/",
