@@ -1,0 +1,290 @@
+[
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 1,
+    "fields": {
+      "recipe": 1,
+      "keyword": 1
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 2,
+    "fields": {
+      "recipe": 1,
+      "keyword": 2
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 3,
+    "fields": {
+      "recipe": 1,
+      "keyword": 3
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 4,
+    "fields": {
+      "recipe": 1,
+      "keyword": 4
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 5,
+    "fields": {
+      "recipe": 1,
+      "keyword": 18
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 6,
+    "fields": {
+      "recipe": 2,
+      "keyword": 6
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 7,
+    "fields": {
+      "recipe": 2,
+      "keyword": 7
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 8,
+    "fields": {
+      "recipe": 2,
+      "keyword": 8
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 9,
+    "fields": {
+      "recipe": 2,
+      "keyword": 9
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 10,
+    "fields": {
+      "recipe": 3,
+      "keyword": 12
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 11,
+    "fields": {
+      "recipe": 3,
+      "keyword": 10
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 12,
+    "fields": {
+      "recipe": 3,
+      "keyword": 11
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 13,
+    "fields": {
+      "recipe": 4,
+      "keyword": 33
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 14,
+    "fields": {
+      "recipe": 4,
+      "keyword": 13
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 15,
+    "fields": {
+      "recipe": 4,
+      "keyword": 14
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 16,
+    "fields": {
+      "recipe": 4,
+      "keyword": 15
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 17,
+    "fields": {
+      "recipe": 4,
+      "keyword": 16
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 18,
+    "fields": {
+      "recipe": 4,
+      "keyword": 17
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 19,
+    "fields": {
+      "recipe": 4,
+      "keyword": 18
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 20,
+    "fields": {
+      "recipe": 5,
+      "keyword": 12
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 21,
+    "fields": {
+      "recipe": 5,
+      "keyword": 19
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 22,
+    "fields": {
+      "recipe": 5,
+      "keyword": 20
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 23,
+    "fields": {
+      "recipe": 5,
+      "keyword": 21
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 24,
+    "fields": {
+      "recipe": 5,
+      "keyword": 22
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 25,
+    "fields": {
+      "recipe": 5,
+      "keyword": 23
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 26,
+    "fields": {
+      "recipe": 6,
+      "keyword": 24
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 27,
+    "fields": {
+      "recipe": 6,
+      "keyword": 25
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 28,
+    "fields": {
+      "recipe": 6,
+      "keyword": 26
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 29,
+    "fields": {
+      "recipe": 6,
+      "keyword": 27
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 30,
+    "fields": {
+      "recipe": 7,
+      "keyword": 28
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 31,
+    "fields": {
+      "recipe": 7,
+      "keyword": 29
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 32,
+    "fields": {
+      "recipe": 7,
+      "keyword": 30
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 33,
+    "fields": {
+      "recipe": 7,
+      "keyword": 31
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 34,
+    "fields": {
+      "recipe": 8,
+      "keyword": 32
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 35,
+    "fields": {
+      "recipe": 8,
+      "keyword": 33
+    }
+  },
+  {
+    "model": "blessipeapi.recipe_keyword",
+    "pk": 36,
+    "fields": {
+      "recipe": 8,
+      "keyword": 34
+    }
+  }
+]

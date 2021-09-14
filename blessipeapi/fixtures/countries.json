@@ -1,0 +1,233 @@
+[
+  {
+    "model": "blessipeapi.country",
+    "pk": 1,
+    "fields": {
+      "name": "USA"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 2,
+    "fields": {
+      "name": "Belgium"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 3,
+    "fields": {
+      "name": "Austria"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 4,
+    "fields": {
+      "name": "Germany"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 5,
+    "fields": {
+      "name": "France"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 6,
+    "fields": {
+      "name": "England"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 7,
+    "fields": {
+      "name": "Lichtenstein"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 8,
+    "fields": {
+      "name": "Italy"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 9,
+    "fields": {
+      "name": "Croatia"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 10,
+    "fields": {
+      "name": "Wales"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 11,
+    "fields": {
+      "name": "Portugal"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 12,
+    "fields": {
+      "name": "Brazil"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 13,
+    "fields": {
+      "name": "Chile"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 14,
+    "fields": {
+      "name": "Argentina"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 15,
+    "fields": {
+      "name": "Peru"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 16,
+    "fields": {
+      "name": "Colombia"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 17,
+    "fields": {
+      "name": "Uruguay"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 18,
+    "fields": {
+      "name": "Mexico"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 19,
+    "fields": {
+      "name": "Guatemala"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 20,
+    "fields": {
+      "name": "Cuba"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 21,
+    "fields": {
+      "name": "Canada"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 22,
+    "fields": {
+      "name": "Iceland"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 23,
+    "fields": {
+      "name": "Kenya"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 24,
+    "fields": {
+      "name": "Ghana"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 25,
+    "fields": {
+      "name": "Egypt"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 26,
+    "fields": {
+      "name": "Algeria"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 27,
+    "fields": {
+      "name": "Morocco"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 28,
+    "fields": {
+      "name": "Turkey"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 29,
+    "fields": {
+      "name": "Greece"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 30,
+    "fields": {
+      "name": "Poland"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 31,
+    "fields": {
+      "name": "Israel"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 32,
+    "fields": {
+      "name": "Spain"
+    }
+  },
+  {
+    "model": "blessipeapi.country",
+    "pk": 33,
+    "fields": {
+      "name": "Yemen"
+    }
+  }
+]

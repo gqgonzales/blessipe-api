@@ -1,0 +1,240 @@
+[
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 1,
+    "fields": {
+      "word": "sushi"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 2,
+    "fields": {
+      "word": "spicy tuna"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 3,
+    "fields": {
+      "word": "crispy rice"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 4,
+    "fields": {
+      "word": "jalapeno"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 5,
+    "fields": {
+      "word": "asian fusion"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 6,
+    "fields": {
+      "word": "icelandic"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 7,
+    "fields": {
+      "word": "sheep's face"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 8,
+    "fields": {
+      "word": "sheep's head"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 9,
+    "fields": {
+      "word": "svio"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 10,
+    "fields": {
+      "word": "polenta"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 11,
+    "fields": {
+      "word": "chimichurri"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 12,
+    "fields": {
+      "word": "breakfast"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 13,
+    "fields": {
+      "word": "snapper"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 14,
+    "fields": {
+      "word": "catch"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 15,
+    "fields": {
+      "word": "market"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 16,
+    "fields": {
+      "word": "red snapper"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 17,
+    "fields": {
+      "word": "whole fish"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 18,
+    "fields": {
+      "word": "fish"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 19,
+    "fields": {
+      "word": "english breakfast"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 20,
+    "fields": {
+      "word": "bangers"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 21,
+    "fields": {
+      "word": "beans"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 22,
+    "fields": {
+      "word": "black pudding"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 23,
+    "fields": {
+      "word": "blood sausage"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 24,
+    "fields": {
+      "word": "milanesa"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 25,
+    "fields": {
+      "word": "argentinian"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 26,
+    "fields": {
+      "word": "breaded beef"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 27,
+    "fields": {
+      "word": "breaded chicken"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 28,
+    "fields": {
+      "word": "cassoulet"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 29,
+    "fields": {
+      "word": "stew"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 30,
+    "fields": {
+      "word": "french"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 31,
+    "fields": {
+      "word": "duck confit"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 32,
+    "fields": {
+      "word": "paella"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 33,
+    "fields": {
+      "word": "seafood"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 34,
+    "fields": {
+      "word": "spanish"
+    }
+  }
+]
