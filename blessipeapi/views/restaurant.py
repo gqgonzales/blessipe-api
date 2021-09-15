@@ -11,7 +11,7 @@ from blessipeapi.models import Restaurant, Traveler, City
 
 
 class RestaurantView(ViewSet):
-    """Level up restaurants"""
+    """Blessipe restaurant viewset"""
 
     def create(self, request):
         """Handle POST operations

@@ -10,7 +10,7 @@ from blessipeapi.models import Recipe, Traveler, Restaurant
 
 
 class RecipeView(ViewSet):
-    """Level up recipes"""
+    """Blessipe recipes"""
 
     def create(self, request):
         """Handle POST operations
