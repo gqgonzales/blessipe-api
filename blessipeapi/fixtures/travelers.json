@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "user": 1,
-      "bio": "Head Wizard at Nashville Software School",
+      "bio": "Head Wizard at Nashville Software School, trying to expand my palette.",
       "city": 1
     }
   },
@@ -23,7 +23,7 @@
     "fields": {
       "user": 3,
       "bio": "Aspiring to get to every continent before I'm 30! What should I try on each one?",
-      "city": 1
+      "city": 3
     }
   }
 ]
