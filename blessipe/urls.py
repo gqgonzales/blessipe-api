@@ -19,12 +19,13 @@ from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
 from rest_framework import routers
-from blessipeapi.views import register_user, login_user, RecipeView, RestaurantView, CountryView
+from blessipeapi.views import register_user, login_user, RecipeView, RestaurantView, CountryView, CityView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'recipes', RecipeView, 'recipe'),
 router.register(r'restaurants', RestaurantView, 'restaurant'),
 router.register(r'countries', CountryView, 'country')
+router.register(r'cities', CityView, 'city')
 
 urlpatterns = [
     path('', include(router.urls)),
