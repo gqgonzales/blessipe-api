@@ -33,8 +33,8 @@ class RecipeView(ViewSet):
 
         # Use the Django ORM to get the record from the database
         # whose `id` is what the client passed as the
-        # `restaurant_id` in the body of the request.
-        restaurant = Restaurant.objects.get(pk=request.data["restaurant_id"])
+        # `restaurant` in the body of the request.
+        restaurant = Restaurant.objects.get(pk=request.data["restaurant"])
         recipe.restaurant = restaurant
 
         # Try to save the new recipe to the database, then
@@ -88,7 +88,7 @@ class RecipeView(ViewSet):
         recipe.date = request.data["date"]
         recipe.traveler = traveler
 
-        restaurant = Restaurant.objects.get(pk=request.data["restaurant_id"])
+        restaurant = Restaurant.objects.get(pk=request.data["restaurant"])
         recipe.restaurant = restaurant
         recipe.save()
 
