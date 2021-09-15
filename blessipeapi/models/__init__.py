@@ -1,12 +1,13 @@
-from .city import City
 from .country import Country
+from .city import City
 from .keyword import Keyword
-from .rating import Rating
 from .recipe import Recipe
-from .recipe_comment import RecipeComment
-from .recipe_image import RecipeImage
-from .recipe_keyword import RecipeKeyword
 from .restaurant import Restaurant
 from .restaurant_keyword import Restaurant
-from .review import Review
 from .traveler import Traveler
+from .restaurant_keyword import RestaurantKeyword
+from .recipe_keyword import RecipeKeyword
+# from .recipe_comment import RecipeComment
+# from .recipe_image import RecipeImage
+# from .review import Review
+# from .rating import Rating

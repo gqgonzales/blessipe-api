@@ -9,3 +9,6 @@ class RecipeKeyword(models.Model):
     """
     recipe = models.ForeignKey("Recipe", on_delete=models.CASCADE)
     keyword = models.ForeignKey("Keyword", on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.recipe.name} – Keyword: {self.keyword.word}'

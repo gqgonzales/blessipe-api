@@ -4,8 +4,7 @@
     "pk": 1,
     "fields": {
       "user": 1,
-      "bio": "Head Wizard at Nashville Software School, trying to expand my palette.",
-      "city": 1
+      "bio": "Head Wizard at Nashville Software School, trying to expand my palette."
     }
   },
   {
@@ -13,8 +12,7 @@
     "pk": 2,
     "fields": {
       "user": 2,
-      "bio": "Likes: Citrus, rock climbing, dogs in sombreros. Dislikes: Snakes, when your seatbelt catches because you pull it forward too quickly, and front end development.",
-      "city": 1
+      "bio": "Likes: Citrus, rock climbing, dogs in sombreros. Dislikes: Snakes, when your seatbelt catches because you pull it forward too quickly, and front end development."
     }
   },
   {
@@ -22,8 +20,7 @@
     "pk": 3,
     "fields": {
       "user": 3,
-      "bio": "Aspiring to get to every continent before I'm 30! What should I try on each one?",
-      "city": 3
+      "bio": "Aspiring to get to every continent before I'm 30! What should I try on each one?"
     }
   }
 ]
