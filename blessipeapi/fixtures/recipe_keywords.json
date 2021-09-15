@@ -1,6 +1,6 @@
 [
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 1,
     "fields": {
       "recipe": 1,
@@ -8,7 +8,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 2,
     "fields": {
       "recipe": 1,
@@ -16,7 +16,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 3,
     "fields": {
       "recipe": 1,
@@ -24,7 +24,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 4,
     "fields": {
       "recipe": 1,
@@ -32,7 +32,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 5,
     "fields": {
       "recipe": 1,
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 6,
     "fields": {
       "recipe": 2,
@@ -48,7 +48,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 7,
     "fields": {
       "recipe": 2,
@@ -56,7 +56,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 8,
     "fields": {
       "recipe": 2,
@@ -64,7 +64,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 9,
     "fields": {
       "recipe": 2,
@@ -72,7 +72,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 10,
     "fields": {
       "recipe": 3,
@@ -80,7 +80,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 11,
     "fields": {
       "recipe": 3,
@@ -88,7 +88,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 12,
     "fields": {
       "recipe": 3,
@@ -96,7 +96,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 13,
     "fields": {
       "recipe": 4,
@@ -104,7 +104,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 14,
     "fields": {
       "recipe": 4,
@@ -112,7 +112,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 15,
     "fields": {
       "recipe": 4,
@@ -120,7 +120,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 16,
     "fields": {
       "recipe": 4,
@@ -128,7 +128,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 17,
     "fields": {
       "recipe": 4,
@@ -136,7 +136,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 18,
     "fields": {
       "recipe": 4,
@@ -144,7 +144,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 19,
     "fields": {
       "recipe": 4,
@@ -152,7 +152,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 20,
     "fields": {
       "recipe": 5,
@@ -160,7 +160,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 21,
     "fields": {
       "recipe": 5,
@@ -168,7 +168,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 22,
     "fields": {
       "recipe": 5,
@@ -176,7 +176,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 23,
     "fields": {
       "recipe": 5,
@@ -184,7 +184,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 24,
     "fields": {
       "recipe": 5,
@@ -192,7 +192,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 25,
     "fields": {
       "recipe": 5,
@@ -200,7 +200,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 26,
     "fields": {
       "recipe": 6,
@@ -208,7 +208,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 27,
     "fields": {
       "recipe": 6,
@@ -216,7 +216,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 28,
     "fields": {
       "recipe": 6,
@@ -224,7 +224,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 29,
     "fields": {
       "recipe": 6,
@@ -232,7 +232,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 30,
     "fields": {
       "recipe": 7,
@@ -240,7 +240,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 31,
     "fields": {
       "recipe": 7,
@@ -248,7 +248,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 32,
     "fields": {
       "recipe": 7,
@@ -256,7 +256,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 33,
     "fields": {
       "recipe": 7,
@@ -264,7 +264,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 34,
     "fields": {
       "recipe": 8,
@@ -272,7 +272,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 35,
     "fields": {
       "recipe": 8,
@@ -280,7 +280,7 @@
     }
   },
   {
-    "model": "blessipeapi.recipe_keyword",
+    "model": "blessipeapi.recipekeyword",
     "pk": 36,
     "fields": {
       "recipe": 8,

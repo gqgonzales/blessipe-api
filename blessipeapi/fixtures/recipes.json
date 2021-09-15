@@ -14,7 +14,7 @@
     "model": "blessipeapi.recipe",
     "pk": 2,
     "fields": {
-      "restaurant": 1,
+      "restaurant": 3,
       "traveler": 2,
       "name": "Svið",
       "description": "Sheep's face: boiled, brain removed, and tenderized. Served with mashed potatos. Delicous, in a gamey sort of way.",
