@@ -1,4 +1,5 @@
 from blessipeapi.models.recipe import Recipe
+from blessipeapi.models.keyword import Keyword
 from django.db import models
 
 
@@ -8,4 +9,3 @@ class RecipeKeyword(models.Model):
     """
     recipe = models.ForeignKey("Recipe", on_delete=models.CASCADE)
     keyword = models.ForeignKey("Keyword", on_delete=models.CASCADE)
-    

@@ -1,4 +1,5 @@
 from blessipeapi.models.restaurant import Restaurant
+from blessipeapi.models.keyword import Keyword
 from django.db import models
 
 

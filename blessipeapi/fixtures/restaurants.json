@@ -1,0 +1,365 @@
+[
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 1,
+    "fields": {
+      "name": "Sushi Katsu-Ya",
+      "address": "11680 Ventura Blvd, Studio City, CA 91604",
+      "phone_number": "+1-818-985-6976",
+      "url": "https://www.katsu-yagroup.com/current-menu/",
+      "city": 6
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 2,
+    "fields": {
+      "name": "The Point Kitchen and Bar",
+      "address": "3326 Portola Dr, Santa Cruz, CA 95062",
+      "phone_number": "+1-831-476-2733",
+      "url": "https://www.thepointkitchenandbar.com",
+      "city": 7
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 3,
+    "fields": {
+      "name": "Fljótt og Gott",
+      "address": "Vatnsmýrarvegur 10, 101 Reykjavík, Iceland",
+      "phone_number": "+354 552 1288",
+      "url": "https://www.facebook.com/Flj%C3%B3tt-og-gott-319723214896463/",
+      "city": 8
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 4,
+    "fields": {
+      "name": "Bakersfield",
+      "address": "201 3rd Ave S, Nashville, TN 37201",
+      "phone_number": "+1-615-522-0970",
+      "url": "https://www.bakersfieldtacos.com/qr-nsh-menu/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 5,
+    "fields": {
+      "name": "Topsail",
+      "address": "440 W Coleman Blvd, Mt Pleasant, SC 29464",
+      "phone_number": "+1-843-416-8306",
+      "url": "https://topsailmtpleasant.com",
+      "city": 9
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 6,
+    "fields": {
+      "name": "Regency Cafe",
+      "address": "17-19 Regency St, London SW1P 4BY, United Kingdom",
+      "phone_number": "+44-20-7821-6596",
+      "url": "https://regencycafe.has.restaurant",
+      "city": 2
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 7,
+    "fields": {
+      "name": "Abyssinia Ethiopian Restaurant",
+      "address": "13 Dade Link, Labone, Accra, Ghana",
+      "phone_number": "+233-20-444-9494",
+      "url": "https://www.abyssiniagh.com",
+      "city": 4
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 8,
+    "fields": {
+      "name": "Otium",
+      "address": "222 South Hope Street, Los Angeles, CA 90012",
+      "phone_number": "+1-213-935-8500",
+      "url": "https://otiumla.com",
+      "city": 3
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 9,
+    "fields": {
+      "name": "El Club De La Milanesa",
+      "address": "Av. Juramento 2995, C1428 CABA, Argentina",
+      "phone_number": "+54-11-5263-7602",
+      "url": "https://elclubdelamilanesa.com/sucursal-belgrano-r-caba.html",
+      "city": 10
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 10,
+    "fields": {
+      "name": "Arroceria Casa de Valencia",
+      "address": "Paseo del Pintor Rosales, 58, 28008 Madrid, Spain",
+      "phone_number": "+34-915-44-17-47",
+      "url": "https://www.lacasavalencia.es",
+      "city": 11
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 11,
+    "fields": {
+      "name": "Barcelona Wine Bar",
+      "address": "1200 Villa Pl Suite 110, Nashville, TN 37212",
+      "phone_number": "+1-615-327-0600",
+      "url": "https://barcelonawinebar.com/location/nashville/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 12,
+    "fields": {
+      "name": "The Yellow Porch",
+      "address": "734 Thompson Ln, Nashville, TN 37204",
+      "phone_number": "+1-615-386-0260",
+      "url": "https://www.theyellowporch.com/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 13,
+    "fields": {
+      "name": "Tres Gauchos",
+      "address": "3955 Nolensville Pike #306, Nashville, TN 37211",
+      "phone_number": "+1-615-373-9292",
+      "url": "https://tresgauchosgrill.com/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 14,
+    "fields": {
+      "name": "Virago",
+      "address": "1120 McGavock St, Nashville, TN 37203",
+      "phone_number": "+1-615-254-1902",
+      "url": "https://www.mstreetnashville.com/virago",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 15,
+    "fields": {
+      "name": "Sunda",
+      "address": "592 12th Ave S, Nashville, TN 37203",
+      "phone_number": "+1-615-610-7566",
+      "url": "https://sundanewasian.com/nashville/menus/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 16,
+    "fields": {
+      "name": "Two Ten Jack",
+      "address": "592 12th Ave S, Nashville, TN 37203",
+      "phone_number": "+1-615-454-2731",
+      "url": "https://twotenjack.com/nashville/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 17,
+    "fields": {
+      "name": "Giovanni Ristorante",
+      "address": "909 20th Ave S, Nashville, TN 37212",
+      "phone_number": "+1-615-760-5932",
+      "url": "https://www.giovanninashville.com/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 18,
+    "fields": {
+      "name": "Pomodoro East",
+      "address": "701 Porter Rd, Nashville, TN 37206",
+      "phone_number": "+1-615-873-4978",
+      "url": "https://www.pomodoroeast.com/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 19,
+    "fields": {
+      "name": "Subculture",
+      "address": "5737 Nolensville Pike, Nashville, TN 37211",
+      "phone_number": "+1-615-955-1223",
+      "url": "https://subculturecafe.com/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 20,
+    "fields": {
+      "name": "Attica",
+      "address": "74 Glen Eira Rd, Ripponlea VIC 3185, Australia",
+      "phone_number": "+61-3-9530-0111",
+      "url": "https://www.attica.com.au/dining-room",
+      "city": 12
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 21,
+    "fields": {
+      "name": "Henrietta Red",
+      "address": "1200 4th Ave N, Nashville, TN 37208",
+      "phone_number": "+1-615-490-8042",
+      "url": "https://www.henriettared.com/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 22,
+    "fields": {
+      "name": "Capitol Grille",
+      "address": "231 6th Avenue N, Nashville, TN 37219",
+      "phone_number": "+1-615-345-7116",
+      "url": "https://www.capitolgrillenashville.com/our-food-copy-20200424145404-copy-20200603174535.htm",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 23,
+    "fields": {
+      "name": "Red Perch",
+      "address": "4101 Charlotte Avenue G120, Nashville, Tennessee 37209",
+      "phone_number": "+1-615-964-7104",
+      "url": "https://redperch.com",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 24,
+    "fields": {
+      "name": "Fleet Street Pub",
+      "address": "207 Printers Alley #101, Nashville, TN 37201",
+      "phone_number": "+1-615-200-0782",
+      "url": "https://www.fleetstreetpub.com",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 25,
+    "fields": {
+      "name": "McNamara's Irish Pub & Restaurant",
+      "address": "2740 Old Lebanon Rd, Nashville, TN 37214",
+      "phone_number": "+1-615-885-7262",
+      "url": "https://mcnamarasirishpub.com",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 26,
+    "fields": {
+      "name": "Husk",
+      "address": "37 Rutledge St, Nashville, TN 37210",
+      "phone_number": "+1-615-256-6565",
+      "url": "https://husknashville.com",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 27,
+    "fields": {
+      "name": "The 404 Kitchen",
+      "address": "507 12th Ave S Fl 2, Nashville, TN 37203",
+      "phone_number": "+1-615-251-1404",
+      "url": "https://www.the404nashville.com/menu/",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 28,
+    "fields": {
+      "name": "City House",
+      "address": "1222 4th Ave N, Nashville, TN 37208",
+      "phone_number": "+1-615-736-5838",
+      "url": "https://www.cityhousenashville.com",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 29,
+    "fields": {
+      "name": "Santo",
+      "address": "3998 Hillsboro Pike, Nashville, TN 37215",
+      "phone_number": "+1-615-336-3426",
+      "url": "https://www.santonashville.com",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 30,
+    "fields": {
+      "name": "Urban Grub",
+      "address": "2506 12th Ave S, Nashville, TN 37204",
+      "phone_number": "+1-615-679-9342",
+      "url": "https://www.urbangrub.net",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 31,
+    "fields": {
+      "name": "Once Upon A Time In France",
+      "address": "1102 Gallatin Ave, Nashville, TN 37206",
+      "phone_number": "+1-615-649-8284",
+      "url": "https://www.onceuponatime-infrance.com/menu",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 32,
+    "fields": {
+      "name": "Miel",
+      "address": "343 53rd Ave N, Nashville, TN 37209",
+      "phone_number": "+1-615-298-3663",
+      "url": "https://www.mielrestaurant.com",
+      "city": 1
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant",
+    "pk": 33,
+    "fields": {
+      "name": "Sinema",
+      "address": "2600 8th Ave South, Suite 102, Nashville, TN 37204 ",
+      "phone_number": "+1-615-942-7746",
+      "url": "https://www.sinemanashville.com/menu",
+      "city": 1
+    }
+  }
+]

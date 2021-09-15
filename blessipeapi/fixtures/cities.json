@@ -1,0 +1,98 @@
+[
+  {
+    "model": "blessipeapi.city",
+    "pk": 1,
+    "fields": {
+      "name": "Nashville",
+      "country": 1
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 2,
+    "fields": {
+      "name": "London",
+      "country": 6
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 3,
+    "fields": {
+      "name": "Los Angeles",
+      "country": 1
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 4,
+    "fields": {
+      "name": "Accra",
+      "country": 24
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 5,
+    "fields": {
+      "name": "Melbourne",
+      "country": 3
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 6,
+    "fields": {
+      "name": "Studio City",
+      "country": 1
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 7,
+    "fields": {
+      "name": "Santa Cruz",
+      "country": 1
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 8,
+    "fields": {
+      "name": "Reykjavík",
+      "country": 22
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 9,
+    "fields": {
+      "name": "Mt Pleasant",
+      "country": 1
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 10,
+    "fields": {
+      "name": "Buenos Aires",
+      "country": 14
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 11,
+    "fields": {
+      "name": "Madrid",
+      "country": 32
+    }
+  },
+  {
+    "model": "blessipeapi.city",
+    "pk": 12,
+    "fields": {
+      "name": "Ripponlea",
+      "country": 3
+    }
+  }
+]
