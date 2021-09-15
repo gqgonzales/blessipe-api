@@ -6,7 +6,10 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
+from django.db.models import Case, When
+from django.db.models.fields import BooleanField
 from blessipeapi.models import Recipe, Traveler, Restaurant
+from django.contrib.auth.models import User
 
 
 class RecipeView(ViewSet):
@@ -120,23 +123,32 @@ class RecipeView(ViewSet):
         Returns:
             Response -- JSON serialized list of recipes
         """
-        # Get all recipe records from the database
-        recipes = Recipe.objects.all()
+        # recipes = Recipe.objects.all()
 
         # Support filtering recipes by traveler
         #    http://localhost:8000/recipes?traveler=1
         #
-        # That URL will retrieve all tabletop recipes
+        # That URL will retrieve all recipes by travler #1, Steve
         # traveler = self.request.query_params.get('traveler', None)
         # if traveler is not None:
         #     recipes = recipes.filter(traveler__id=traveler)
         #  This dunderscored id is acting kind of like a join table WHERE statement
+        traveler = Traveler.objects.get(user=request.auth.user)
+        recipes = Recipe.objects.annotate(
+            author=Case(
+                When(traveler=traveler, then=True),
+                default=False,
+                output_field=BooleanField()
+            ))
+        # .filter(traveler=traveler)
 
         serializer = RecipeSerializer(
             recipes, many=True, context={'request': request})
         return Response(serializer.data)
 
 # The serializer class determines how the Python data should be serialized as JSON to be sent back to the client.
+
+# DO YOU NEED A `RecipeUserSerializer` HERE?
 
 
 class RecipeSerializer(serializers.ModelSerializer):
@@ -148,5 +160,5 @@ class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
         fields = ('id', 'name', 'description', 'date',
-                  'restaurant', 'traveler')
+                  'restaurant', 'traveler', 'author')
         depth = 2
