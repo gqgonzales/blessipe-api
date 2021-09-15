@@ -844,7 +844,7 @@
     "pk": 105,
     "fields": {
       "restaurant": 16,
-      "keyword": 53
+      "keyword": 64
     }
   },
   {
@@ -1036,7 +1036,7 @@
     "pk": 129,
     "fields": {
       "restaurant": 19,
-      "keyword": 53
+      "keyword": 64
     }
   },
   {
@@ -1688,6 +1688,142 @@
     "fields": {
       "restaurant": 30,
       "keyword": 37
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 211,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 30
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 212,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 59
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 213,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 62
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 214,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 31
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 215,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 60
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 216,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 65
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 217,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 66
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 218,
+    "fields": {
+      "restaurant": 32,
+      "keyword": 30
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 219,
+    "fields": {
+      "restaurant": 32,
+      "keyword": 63
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 220,
+    "fields": {
+      "restaurant": 32,
+      "keyword": 67
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 221,
+    "fields": {
+      "restaurant": 32,
+      "keyword": 18
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 222,
+    "fields": {
+      "restaurant": 32,
+      "keyword": 70
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 223,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 38
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 224,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 18
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 225,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 36
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 226,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 68
+    }
+  },
+  {
+    "model": "blessipeapi.restaurant_keyword",
+    "pk": 227,
+    "fields": {
+      "restaurant": 31,
+      "keyword": 69
     }
   }
 ]

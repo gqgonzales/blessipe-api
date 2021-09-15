@@ -374,13 +374,6 @@
     "model": "blessipeapi.keyword",
     "pk": 53,
     "fields": {
-      "word": "ramen"
-    }
-  },
-  {
-    "model": "blessipeapi.keyword",
-    "pk": 53,
-    "fields": {
       "word": "italian"
     }
   },
@@ -445,6 +438,62 @@
     "pk": 62,
     "fields": {
       "word": "confit"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 63,
+    "fields": {
+      "word": "ceviche"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 64,
+    "fields": {
+      "word": "ramen"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 65,
+    "fields": {
+      "word": "foie gras"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 66,
+    "fields": {
+      "word": "escargot"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 67,
+    "fields": {
+      "word": "duck"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 68,
+    "fields": {
+      "word": "hen"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 69,
+    "fields": {
+      "word": "elk"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 70,
+    "fields": {
+      "word": "mussels"
     }
   }
 ]
