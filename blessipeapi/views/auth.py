@@ -59,7 +59,7 @@ def register_user(request):
     # Now save the extra info in the traveler table
     traveler = Traveler.objects.create(
         bio=request.data['bio'],
-        city=request.data['city'],
+        # city=request.data['city'],
         user=new_user
     )
 
