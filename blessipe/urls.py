@@ -18,9 +18,17 @@ from django.urls import path
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
-from blessipeapi.views import register_user, login_user
+from rest_framework import routers
+from blessipeapi.views import register_user, login_user, RecipeView, RestaurantView, CountryView, CityView
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'recipes', RecipeView, 'recipe'),
+router.register(r'restaurants', RestaurantView, 'restaurant'),
+router.register(r'countries', CountryView, 'country')
+router.register(r'cities', CityView, 'city')
 
 urlpatterns = [
+    path('', include(router.urls)),
     path('register', register_user),
     path('login', login_user),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),

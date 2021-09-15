@@ -3,7 +3,6 @@ from .city import City
 from .keyword import Keyword
 from .recipe import Recipe
 from .restaurant import Restaurant
-from .restaurant_keyword import Restaurant
 from .traveler import Traveler
 from .restaurant_keyword import RestaurantKeyword
 from .recipe_keyword import RecipeKeyword
