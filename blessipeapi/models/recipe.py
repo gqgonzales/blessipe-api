@@ -12,5 +12,13 @@ class Recipe(models.Model):
     # image = models.ForeignKey("RecipeImage", on_delete=models.CASCADE)
     # comments = models.TextField()
 
+    @property
+    def author(self):
+        return self.__author
+
+    @author.setter
+    def author(self, value):
+        self.__author = value
+
     def __str__(self):
         return self.name
