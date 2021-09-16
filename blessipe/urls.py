@@ -19,13 +19,16 @@ from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
 from rest_framework import routers
-from blessipeapi.views import register_user, login_user, RecipeView, RestaurantView, CountryView, CityView
+from django.conf import settings
+from django.conf.urls.static import static
+from blessipeapi.views import register_user, login_user, RecipeView, RestaurantView, CountryView, CityView, RecipeImageView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'recipes', RecipeView, 'recipe'),
 router.register(r'restaurants', RestaurantView, 'restaurant'),
 router.register(r'countries', CountryView, 'country')
 router.register(r'cities', CityView, 'city')
+router.register(r'recipeimages', RecipeImageView, 'recipeimage')
 
 urlpatterns = [
     path('', include(router.urls)),
@@ -33,5 +36,4 @@ urlpatterns = [
     path('login', login_user),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
-]
-# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
