@@ -21,4 +21,4 @@ class Recipe(models.Model):
         self.__author = value
 
     def __str__(self):
-        return self.name
+        return f'{self.name} from {self.restaurant.name}'
