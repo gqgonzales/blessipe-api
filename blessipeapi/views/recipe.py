@@ -1,4 +1,5 @@
 """View module for handling requests about recipes"""
+from blessipeapi.models.recipe_image import RecipeImage
 from django.core.exceptions import ValidationError
 from rest_framework import status
 from django.http import HttpResponseServerError
@@ -39,6 +40,8 @@ class RecipeView(ViewSet):
         # `restaurant` in the body of the request.
         restaurant = Restaurant.objects.get(pk=request.data["restaurant"])
         recipe.restaurant = restaurant
+        image = RecipeImage.objects.get(pk=request.data["recipe_image"])
+        recipe.image = image
 
         # Try to save the new recipe to the database, then
         # serialize the recipe instance as JSON, and send the
@@ -93,6 +96,9 @@ class RecipeView(ViewSet):
 
         restaurant = Restaurant.objects.get(pk=request.data["restaurant"])
         recipe.restaurant = restaurant
+        image = RecipeImage.objects.get(pk=request.data["recipe_image"])
+        recipe.image = image
+
         recipe.save()
 
         # 204 status code means everything worked but the
@@ -160,5 +166,5 @@ class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
         fields = ('id', 'name', 'description', 'date',
-                  'restaurant', 'traveler', 'author')
+                  'restaurant', 'traveler', 'author', 'image')
         depth = 2

@@ -1,0 +1,26 @@
+[
+  {
+    "model": "blessipeapi.RecipeImage",
+    "pk": 1,
+    "fields": {
+      "traveler": 1,
+      "image": ""
+    }
+  },
+  {
+    "model": "blessipeapi.RecipeImage",
+    "pk": 2,
+    "fields": {
+      "traveler": 2,
+      "image": "https://res.cloudinary.com/gqgonzales/image/upload/v1631817313/recipe_images/72496995-E3F1-4630-956D-FCF5C715C8A4_1_105_c_aqfher.jpg"
+    }
+  },
+  {
+    "model": "blessipeapi.RecipeImage",
+    "pk": 3,
+    "fields": {
+      "traveler": 2,
+      "image": "https://res.cloudinary.com/gqgonzales/image/upload/v1631817442/recipe_images/paella_1_yd9jcn.jpg"
+    }
+  }
+]

@@ -9,7 +9,8 @@ class Recipe(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=300)
     date = models.DateField()
-    # image = models.ForeignKey("RecipeImage", on_delete=models.CASCADE)
+    image = models.ForeignKey(
+        "RecipeImage", on_delete=models.CASCADE, default=0, related_name="food_photo")
     # comments = models.TextField()
 
     @property
