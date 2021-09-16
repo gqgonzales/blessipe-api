@@ -74,6 +74,34 @@ class RecipeImageView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+    def list(self, request):
+        """Handle GET requests to recipes resource
+
+        Returns:
+            Response -- JSON serialized list of recipes
+        """
+        recipe_images = RecipeImage.objects.all()
+
+        serializer = RecipeImageSerializer(
+            recipe_images, many=True, context={'request': request})
+        return Response(serializer.data)
+
+    def retrieve(self, request, pk=None):
+        """Handle GET requests for single image
+
+        Returns:
+            Response -- JSON serialized image instance
+        """
+        try:
+            recipe_image = RecipeImage.objects.get(pk=pk)
+            serializer = RecipeImageSerializer(
+                recipe_image, context={'request': request})
+            return Response(serializer.data)
+        except RecipeImage.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return HttpResponseServerError(ex)
+
 
 class RecipeImageSerializer(serializers.ModelSerializer):
     """JSON serializer for images
