@@ -1,5 +1,6 @@
 """View module for handling requests about recipes"""
-from blessipeapi.models.recipe_image import RecipeImage
+from django.core.files.base import ContentFile
+import base64
 from django.core.exceptions import ValidationError
 from rest_framework import status
 from django.http import HttpResponseServerError
@@ -11,6 +12,7 @@ from django.db.models import Case, When
 from django.db.models.fields import BooleanField
 from blessipeapi.models import Recipe, Traveler, Restaurant
 from django.contrib.auth.models import User
+import uuid
 
 
 class RecipeView(ViewSet):
@@ -40,8 +42,11 @@ class RecipeView(ViewSet):
         # `restaurant` in the body of the request.
         restaurant = Restaurant.objects.get(pk=request.data["restaurant"])
         recipe.restaurant = restaurant
-        image = RecipeImage.objects.get(pk=request.data["recipe_image"])
-        recipe.image = image
+        format, imgstr = request.data["image"].split(';base64,')
+        ext = format.split('/')[-1]
+        data = ContentFile(base64.b64decode(imgstr),
+                           name=f'{recipe.id}-{uuid.uuid4()}.{ext}')
+        recipe.image = data
 
         # Try to save the new recipe to the database, then
         # serialize the recipe instance as JSON, and send the
@@ -96,8 +101,11 @@ class RecipeView(ViewSet):
 
         restaurant = Restaurant.objects.get(pk=request.data["restaurant"])
         recipe.restaurant = restaurant
-        image = RecipeImage.objects.get(pk=request.data["recipe_image"])
-        recipe.image = image
+        format, imgstr = request.data["image"].split(';base64,')
+        ext = format.split('/')[-1]
+        data = ContentFile(base64.b64decode(imgstr),
+                           name=f'{recipe.id}-{uuid.uuid4()}.{ext}')
+        recipe.image = data
 
         recipe.save()
 
@@ -157,12 +165,42 @@ class RecipeView(ViewSet):
 # DO YOU NEED A `RecipeUserSerializer` HERE?
 
 
+class RecipeUserSerializer(serializers.ModelSerializer):
+    """Not sure if this is really necessary, we'll see
+
+    Arguments:
+        serializer type
+    """
+    class Meta:
+        model = User
+        fields = ('id', 'username')
+        depth = 1
+
+
+class RecipeTravelerSerializer(serializers.ModelSerializer):
+    """Not sure if this is really necessary, we'll see
+
+    Arguments:
+        serializer type
+    """
+
+    user = RecipeUserSerializer(many=False)
+
+    class Meta:
+        model = Traveler
+        fields = ('id', 'user')
+        depth = 1
+
+
 class RecipeSerializer(serializers.ModelSerializer):
     """JSON serializer for recipes
 
     Arguments:
         serializer type
     """
+
+    traveler = RecipeTravelerSerializer(many=False)
+
     class Meta:
         model = Recipe
         fields = ('id', 'name', 'description', 'date',
