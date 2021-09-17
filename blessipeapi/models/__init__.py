@@ -7,6 +7,5 @@ from .traveler import Traveler
 from .restaurant_keyword import RestaurantKeyword
 from .recipe_keyword import RecipeKeyword
 # from .recipe_comment import RecipeComment
-# from .recipe_image import RecipeImage
 # from .review import Review
 # from .rating import Rating

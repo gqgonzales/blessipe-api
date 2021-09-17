@@ -7,7 +7,8 @@
       "traveler": 2,
       "name": "Crispy Rice with Spicy Tuna",
       "description": "Heaven on earth. Perfectly browned sushi rice lays as the bed for a tangy and flavorful bite of that famous katsu-ya spicy tuna. Finished with a tiny slice of jalapeño.",
-      "date": "2018-03-25"
+      "date": "2018-03-25",
+      "image": "recipeimages/crst.jpeg"
     }
   },
   {
@@ -18,7 +19,8 @@
       "traveler": 2,
       "name": "Svið",
       "description": "Sheep's face: boiled, brain removed, and tenderized. Served with mashed potatos. Delicous, in a gamey sort of way.",
-      "date": "2017-03-04"
+      "date": "2017-03-04",
+      "image": "recipeimages/sheeps_face.jpeg"
     }
   },
   {
@@ -29,7 +31,8 @@
       "traveler": 3,
       "name": "Polenta & Eggs",
       "description": "My first time eating polenta! It almost reminded me of a savory cornbread. Served with an amazing chimichurri sauce, bacon, and spinach.",
-      "date": "2021-09-12"
+      "date": "2021-09-12",
+      "image": ""
     }
   },
   {
@@ -40,7 +43,8 @@
       "traveler": 1,
       "name": "Red Snapper",
       "description": "I am not a fish-person, or a person who regularly eats, tries, or enjoys fish: but I tried this while on vacation and didn't hate it! In fact, I think I'd try it again. I wonder if there is anywhere in town I can try this 'snapper' again!",
-      "date": "2021-06-11"
+      "date": "2021-06-11",
+      "image": ""
     }
   },
   {
@@ -51,7 +55,8 @@
       "traveler": 1,
       "name": "English Breakfast",
       "description": "Blown away and knocked on my arse after my first full English Breakfast. This was the start of an amazing trip for my family and I. We couldn't eat until sundown, but it was delicious and memorable. The black pudding espcially was a standout.",
-      "date": "2019-07-20"
+      "date": "2019-07-20",
+      "image": ""
     }
   },
   {
@@ -62,7 +67,8 @@
       "traveler": 3,
       "name": "Milanesa",
       "description": "Think I could legit eat this every day. Would always go here after class with Sophia and Chucky.",
-      "date": "2018-02-03"
+      "date": "2018-02-03",
+      "image": ""
     }
   },
   {
@@ -73,7 +79,8 @@
       "traveler": 3,
       "name": "Summer Bean Cassoulet",
       "description": "This was our third anniversary and we wanted to try as many things from the menu as possible. Paige didn't want to even order this one, but we were both floored by the texture and lightness of the dish. Delicious, dressed up with some higher quality meats; still very accesible. Wanted to take another order home for lunch the next day!",
-      "date": "2019-07-07"
+      "date": "2019-07-07",
+      "image": ""
     }
   },
   {
@@ -84,7 +91,8 @@
       "traveler": 2,
       "name": "Paella",
       "description": "My friend Courtney begged me to try hers and I fell in love instantly. So many competing flavors but there was something so comforting about it. We tried Paella from almost every spot we went to that semester, but this palce was the first (and the best).",
-      "date": "2017-11-12"
+      "date": "2017-11-12",
+      "image": "recipeimages/paella_1.jpeg"
     }
   }
 ]
