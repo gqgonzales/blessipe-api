@@ -9,7 +9,7 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
 from django.db.models import Case, When
-from django.db.models.fields import BooleanField
+from django.db.models.fields import BooleanField, NullBooleanField
 from blessipeapi.models import Recipe, Traveler, Restaurant
 from django.contrib.auth.models import User
 import uuid
@@ -42,10 +42,13 @@ class RecipeView(ViewSet):
         # `restaurant` in the body of the request.
         restaurant = Restaurant.objects.get(pk=request.data["restaurant"])
         recipe.restaurant = restaurant
-        format, imgstr = request.data["image"].split(';base64,')
-        ext = format.split('/')[-1]
-        data = ContentFile(base64.b64decode(imgstr),
-                           name=f'{recipe.id}-{uuid.uuid4()}.{ext}')
+        if request.data["image"] != "":
+            format, imgstr = request.data["image"].split(';base64,')
+            ext = format.split('/')[-1]
+            data = ContentFile(base64.b64decode(imgstr),
+                               name=f'{uuid.uuid4()}.{ext}')
+        else:
+            data = None
         recipe.image = data
 
         # Try to save the new recipe to the database, then
@@ -101,11 +104,16 @@ class RecipeView(ViewSet):
 
         restaurant = Restaurant.objects.get(pk=request.data["restaurant"])
         recipe.restaurant = restaurant
-        format, imgstr = request.data["image"].split(';base64,')
-        ext = format.split('/')[-1]
-        data = ContentFile(base64.b64decode(imgstr),
-                           name=f'{recipe.id}-{uuid.uuid4()}.{ext}')
-        recipe.image = data
+
+        image_splitter = request.data["image"].split("/")
+        if image_splitter[0] == "http:":
+            pass
+        else:
+            format, imgstr = request.data["image"].split(';base64,')
+            ext = format.split('/')[-1]
+            data = ContentFile(base64.b64decode(imgstr),
+                               name=f'{uuid.uuid4()}.{ext}')
+            recipe.image = data
 
         recipe.save()
 
