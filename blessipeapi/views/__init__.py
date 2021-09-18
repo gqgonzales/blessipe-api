@@ -3,3 +3,5 @@ from .recipe import RecipeView
 from .restaurant import RestaurantView
 from .country import CountryView
 from .city import CityView
+from .traveler import TravelerView
+from .profile import ProfileView

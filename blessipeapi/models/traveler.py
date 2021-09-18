@@ -8,5 +8,10 @@ class Traveler(models.Model):
     bio = models.CharField(max_length=80)
     # city = models.ForeignKey("City", on_delete=models.CASCADE)
 
+    @property
+    def full_name(self):
+        """returns auth user full name"""
+        return f'{self.user.first_name} {self.user.last_name}'
+
     def __str__(self):
         return self.user.get_full_name()

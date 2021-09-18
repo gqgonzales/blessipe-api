@@ -21,9 +21,11 @@ from django.urls import path
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
-from blessipeapi.views import register_user, login_user, RecipeView, RestaurantView, CountryView, CityView
+from blessipeapi.views import register_user, login_user, RecipeView, RestaurantView, CountryView, CityView, TravelerView, ProfileView
 
 router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'profiles', ProfileView, 'profile')
+router.register(r'travelers', TravelerView, 'traveler')
 router.register(r'recipes', RecipeView, 'recipe'),
 router.register(r'restaurants', RestaurantView, 'restaurant'),
 router.register(r'countries', CountryView, 'country')
