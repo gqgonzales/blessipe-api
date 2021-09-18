@@ -10,7 +10,7 @@ from rest_framework import serializers
 from rest_framework import status
 from django.db.models import Case, When
 from django.db.models.fields import BooleanField, NullBooleanField
-from blessipeapi.models import Recipe, Traveler, Restaurant
+from blessipeapi.models import Recipe, Traveler, Restaurant, City
 from django.contrib.auth.models import User
 import uuid
 
@@ -198,6 +198,34 @@ class RecipeTravelerSerializer(serializers.ModelSerializer):
         model = Traveler
         fields = ('id', 'user')
         depth = 1
+
+
+# class RestaurantCitySerializer(serializers.ModelSerializer):
+#     """Get more info about the restaurant
+
+#     Arguments:
+#         serializer type
+#     """
+
+#     class Meta:
+#         model = City
+#         fields = all
+#         depth = 1
+
+
+# class RecipeRestaurantSerializer(serializers.ModelSerializer):
+#     """Get more info about the restaurant
+
+#     Arguments:
+#         serializer type
+#     """
+
+#     city = RestaurantCitySerializer(many=False)
+
+#     class Meta:
+#         model = Restaurant
+#         fields = ('id', 'name', 'address', 'city')
+#         depth = 2
 
 
 class RecipeSerializer(serializers.ModelSerializer):
