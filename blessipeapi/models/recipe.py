@@ -11,7 +11,7 @@ class Recipe(models.Model):
     date = models.DateField()
     image = models.ImageField(upload_to='recipeimages', height_field=None,
                               width_field=None, max_length=None, null=True)
-    # keywords = models.ManyToManyField("Keyword", through="RecipeKeywords")
+    keywords = models.ManyToManyField("Keyword", through="RecipeKeyword")
 
     # comments = models.TextField()
 

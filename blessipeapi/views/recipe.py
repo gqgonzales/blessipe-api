@@ -10,7 +10,7 @@ from rest_framework import serializers
 from rest_framework import status
 from django.db.models import Case, When
 from django.db.models.fields import BooleanField, NullBooleanField
-from blessipeapi.models import Recipe, Traveler, Restaurant, City
+from blessipeapi.models import Recipe, Traveler, Restaurant, City, RecipeKeyword, Keyword
 from django.contrib.auth.models import User
 import uuid
 
@@ -77,7 +77,15 @@ class RecipeView(ViewSet):
             #   http://localhost:8000/recipes/2
             #
             # The `2` at the end of the route becomes `pk`
-            recipe = Recipe.objects.get(pk=pk)
+            # recipe = Recipe.objects.get(pk=pk)
+            traveler = Traveler.objects.get(user=request.auth.user)
+            recipe = Recipe.objects.annotate(
+                author=Case(
+                    When(traveler=traveler, then=True),
+                    default=False,
+                    output_field=BooleanField()
+                )).get(pk=pk)
+
             serializer = RecipeSerializer(recipe, context={'request': request})
             return Response(serializer.data)
         except Recipe.DoesNotExist as ex:
@@ -163,6 +171,9 @@ class RecipeView(ViewSet):
                 output_field=BooleanField()
             ))
         # .filter(traveler=traveler)
+        keywords = self.request.query_params.get('type', None)
+        if keywords is not None:
+            recipes = recipes.filter(keyword__id=keywords)
 
         serializer = RecipeSerializer(
             recipes, many=True, context={'request': request})
@@ -227,6 +238,12 @@ class RecipeTravelerSerializer(serializers.ModelSerializer):
 #         fields = ('id', 'name', 'address', 'city')
 #         depth = 2
 
+class RecipeKeywordSerializer(serializers.ModelSerializer):
+    """Return keywords on a recipe!"""
+
+    model = RecipeKeyword
+    fields = 'word'
+
 
 class RecipeSerializer(serializers.ModelSerializer):
     """JSON serializer for recipes
@@ -240,5 +257,5 @@ class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
         fields = ('id', 'name', 'description', 'date',
-                  'restaurant', 'traveler', 'author', 'image')
+                  'restaurant', 'traveler', 'author', 'image', 'keywords')
         depth = 2
