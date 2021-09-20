@@ -7,3 +7,4 @@ from .traveler import TravelerView
 from .profile import ProfileView
 from .keyword import KeywordView
 from .recipe_keyword import RecipeKeywordView
+from .restaurant_keyword import RestaurantKeywordView

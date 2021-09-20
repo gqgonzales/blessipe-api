@@ -7,7 +7,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from blessipeapi.models import Restaurant, Traveler, City
+from blessipeapi.models import Restaurant, Traveler, City, RestaurantKeyword
 
 
 class RestaurantView(ViewSet):
@@ -118,14 +118,9 @@ class RestaurantView(ViewSet):
         # Get all restaurant records from the database
         restaurants = Restaurant.objects.all()
 
-        # Support filtering restaurants by traveler
-        #    http://localhost:8000/restaurants?traveler=1
-        #
-        # That URL will retrieve all tabletop restaurants
-        # traveler = self.request.query_params.get('traveler', None)
-        # if traveler is not None:
-        #     restaurants = restaurants.filter(traveler__id=traveler)
-        #  This dunderscored id is acting kind of like a join table WHERE statement
+        keywords = self.request.query_params.get('type', None)
+        if keywords is not None:
+            restaurants = restaurants.filter(keyword__id=keywords)
 
         serializer = RestaurantSerializer(
             restaurants, many=True, context={'request': request})
@@ -134,14 +129,24 @@ class RestaurantView(ViewSet):
 # The serializer class determines how the Python data should be serialized as JSON to be sent back to the client.
 
 
+class RestaurantKeywordSerializer(serializers.ModelSerializer):
+    """Return keywords on a recipe!"""
+
+    model = RestaurantKeyword
+    fields = 'word'
+
+
 class RestaurantSerializer(serializers.ModelSerializer):
     """JSON serializer for restaurants
 
     Arguments:
         serializer type
     """
+
+    # keywords = RestaurantKeywordSerializer(many=True)
+
     class Meta:
         model = Restaurant
         fields = ('id', 'name', 'address', 'phone_number',
-                  'url', 'city')
+                  'url', 'city', 'keywords')
         depth = 2

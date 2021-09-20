@@ -1790,7 +1790,7 @@
     "model": "blessipeapi.restaurantkeyword",
     "pk": 223,
     "fields": {
-      "restaurant": 31,
+      "restaurant": 33,
       "keyword": 38
     }
   },
@@ -1798,7 +1798,7 @@
     "model": "blessipeapi.restaurantkeyword",
     "pk": 224,
     "fields": {
-      "restaurant": 31,
+      "restaurant": 33,
       "keyword": 18
     }
   },
@@ -1806,7 +1806,7 @@
     "model": "blessipeapi.restaurantkeyword",
     "pk": 225,
     "fields": {
-      "restaurant": 31,
+      "restaurant": 33,
       "keyword": 36
     }
   },
@@ -1814,7 +1814,7 @@
     "model": "blessipeapi.restaurantkeyword",
     "pk": 226,
     "fields": {
-      "restaurant": 31,
+      "restaurant": 33,
       "keyword": 68
     }
   },
@@ -1822,7 +1822,7 @@
     "model": "blessipeapi.restaurantkeyword",
     "pk": 227,
     "fields": {
-      "restaurant": 31,
+      "restaurant": 33,
       "keyword": 69
     }
   }

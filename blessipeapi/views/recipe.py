@@ -253,6 +253,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     """
 
     traveler = RecipeTravelerSerializer(many=False)
+    # keywords = RecipeKeywordSerializer(many=True)
 
     class Meta:
         model = Recipe
