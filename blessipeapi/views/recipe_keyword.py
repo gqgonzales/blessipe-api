@@ -1,11 +1,12 @@
 """View module for handling keyword requests"""
+from blessipeapi.models.recipe import Recipe
 from django.core.exceptions import ValidationError
 from rest_framework import status
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from blessipeapi.models import RecipeKeyword
+from blessipeapi.models import RecipeKeyword, Keyword
 
 
 class RecipeKeywordView(ViewSet):
@@ -18,6 +19,15 @@ class RecipeKeywordView(ViewSet):
         """
 
         recipe_keywords = RecipeKeyword.objects.all()
+
+        # Support filtering keywords by recipe
+        #    http://localhost:8000/recipekeywords?recipe=1
+        #
+        # That URL will retrieve all keywords
+        recipe = self.request.query_params.get('recipe', None)
+        if recipe is not None:
+            recipe_keywords = recipe_keywords.filter(recipe__id=recipe)
+        #  This dunderscored id is acting kind of like a join table WHERE statement
 
         serializer = RecipeKeywordSerializer(
             recipe_keywords, many=True, context={'request': request})
@@ -40,10 +50,21 @@ class RecipeKeywordView(ViewSet):
             return HttpResponseServerError(ex)
 
 
+class RecipeSerializer(serializers.ModelSerializer):
+    """Only return specific recipe data from request"""
+
+    class Meta:
+        model = Recipe
+        fields = ('id', 'name')
+
+
 class RecipeKeywordSerializer(serializers.ModelSerializer):
     """JSON serializer for recipe_keywords
     Arguments: serializer type
     """
+
+    recipe = RecipeSerializer(many=False)
+
     class Meta:
         model = RecipeKeyword
         fields = '__all__'

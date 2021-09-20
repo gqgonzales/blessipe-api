@@ -20,6 +20,8 @@ class KeywordView(ViewSet):
 
         keywords = Keyword.objects.all()
 
+
+
         serializer = KeywordSerializer(
             keywords, many=True, context={'request': request})
         return Response(serializer.data)
@@ -76,6 +78,46 @@ class KeywordView(ViewSet):
 
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @action(methods=['get', 'post'], detail=True)
+    def add_keyword(self, request, pk=None):
+        """Add a keyword to the database"""
+    # Django uses the `Authorization` header to determine
+    # which user is making the request to signup
+        keyword = Keyword.objects.all()
+
+        try:
+            # Handle the case if the client specifies a recipe
+            # that doesn't exist
+            recipe = Recipe.objects.get(pk=pk)
+            Keywords = Keyword()
+
+        except Recipe.DoesNotExist:
+            return Response(
+                {'message': 'Recipe does not exist.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # A recipe wants to sign up for an recipe
+        if request.method == "POST":
+            try:
+                # Using the keywords field on the recipe makes it simple to add a recipe to the recipe
+                # .add(recipe) will insert into the join table a new row the gamer_id and the event_id
+                Keywords.add(keyword)
+                recipe.keywords.add(keyword)
+                return Response({}, status=status.HTTP_201_CREATED)
+            except Exception as ex:
+                return Response({'message': ex.args[0]})
+
+        # User wants to leave a previously joined recipe
+        elif request.method == "DELETE":
+            try:
+                # The many to many relationship has a .remove method that removes the recipe from the keywords list
+                # The method deletes the row in the join table that has the gamer_id and event_id
+                recipe.keywords.remove(keyword)
+                return Response(None, status=status.HTTP_204_NO_CONTENT)
+            except Exception as ex:
+                return Response({'message': ex.args[0]})
 
 
 class KeywordSerializer(serializers.ModelSerializer):

@@ -57,6 +57,8 @@ class RecipeView(ViewSet):
         # JSON as a response to the client request
         try:
             recipe.save()
+            recipe.keywords.set(request.data["keywords"])
+
             serializer = RecipeSerializer(recipe, context={'request': request})
             return Response(serializer.data)
 
@@ -125,6 +127,7 @@ class RecipeView(ViewSet):
             recipe.image = data
 
         recipe.save()
+        recipe.keywords.set(request.data["keywords"])
 
         # 204 status code means everything worked but the
         # server is not sending back any data in the response
