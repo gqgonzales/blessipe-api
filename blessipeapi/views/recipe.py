@@ -8,6 +8,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
+from rest_framework.decorators import action
 from django.db.models import Case, When
 from django.db.models.fields import BooleanField, NullBooleanField
 from blessipeapi.models import Recipe, Traveler, Restaurant, City, RecipeKeyword, Keyword
@@ -180,8 +181,6 @@ class RecipeView(ViewSet):
         return Response(serializer.data)
 
 # The serializer class determines how the Python data should be serialized as JSON to be sent back to the client.
-
-# DO YOU NEED A `RecipeUserSerializer` HERE?
 
 
 class RecipeUserSerializer(serializers.ModelSerializer):
