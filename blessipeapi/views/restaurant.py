@@ -126,6 +126,9 @@ class RestaurantView(ViewSet):
             restaurants, many=True, context={'request': request})
         return Response(serializer.data)
 
+    # Maybe a custom action for matching?
+    # RestaurantKeyword.objects.get(word__contains='sushi')
+
 # The serializer class determines how the Python data should be serialized as JSON to be sent back to the client.
 
 

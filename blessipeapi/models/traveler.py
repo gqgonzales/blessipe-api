@@ -6,7 +6,7 @@ class Traveler(models.Model):
     """initializing the traveler module"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.CharField(max_length=80)
-    # city = models.ForeignKey("City", on_delete=models.CASCADE)
+    city = models.ForeignKey("City", on_delete=models.CASCADE, null=True)
 
     @property
     def full_name(self):

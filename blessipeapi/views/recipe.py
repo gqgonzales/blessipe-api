@@ -2,6 +2,7 @@
 from django.core.files.base import ContentFile
 import base64
 from django.core.exceptions import ValidationError
+from django.db.models.expressions import OrderBy
 from rest_framework import status
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
@@ -12,6 +13,7 @@ from rest_framework.decorators import action
 from django.db.models import Case, When
 from django.db.models.fields import BooleanField, NullBooleanField
 from blessipeapi.models import Recipe, Traveler, Restaurant, City, RecipeKeyword, Keyword
+from blessipeapi.views.restaurant import RestaurantSerializer
 from django.contrib.auth.models import User
 import uuid
 
@@ -157,16 +159,7 @@ class RecipeView(ViewSet):
         Returns:
             Response -- JSON serialized list of recipes
         """
-        # recipes = Recipe.objects.all()
 
-        # Support filtering recipes by traveler
-        #    http://localhost:8000/recipes?traveler=1
-        #
-        # That URL will retrieve all recipes by travler #1, Steve
-        # traveler = self.request.query_params.get('traveler', None)
-        # if traveler is not None:
-        #     recipes = recipes.filter(traveler__id=traveler)
-        #  This dunderscored id is acting kind of like a join table WHERE statement
         traveler = Traveler.objects.get(user=request.auth.user)
         recipes = Recipe.objects.annotate(
             author=Case(
@@ -182,6 +175,37 @@ class RecipeView(ViewSet):
         serializer = RecipeSerializer(
             recipes, many=True, context={'request': request})
         return Response(serializer.data)
+
+    @action(methods=['GET'], detail=True)
+    def find_local_restaurants(self, request, pk=None):
+        """Evaluate the words in the keyword list of the given recipe.
+        Then, check the keywords in the lists of all restaurants
+        If a restaurant has a keyword that is similar, return that list instead of all restaurants"""
+        traveler = Traveler.objects.get(user=request.auth.user)
+
+        if request.method == "GET":
+            try:
+
+                recipe = Recipe.objects.get(pk=pk)
+                # Need to destructure list of current recipe's keyword list. Just want the strings.
+                words = [kw.word for kw in recipe.keywords.all()]
+
+                search_words = Restaurant.objects.filter(
+                    keywords__word__in=words,
+                    city=traveler.city).distinct()
+
+                # Destructured list gets passed in to the __in filter, returning only restaurants with a match.
+                # Lastly, filter the filtered list to return only restaurants in the city = traveler.city
+                # Could you set a minimum match limit? Hannah says no.
+                # Could we order_by() the number of successful matches?
+
+                serializer = RestaurantSerializer(
+                    search_words, context={'request': request}, many=True)
+                return Response(serializer.data)
+            except Restaurant.DoesNotExist as ex:
+                return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+            except Exception as ex:
+                return HttpResponseServerError(ex)
 
 # The serializer class determines how the Python data should be serialized as JSON to be sent back to the client.
 
@@ -209,7 +233,7 @@ class RecipeTravelerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Traveler
-        fields = ('id', 'user')
+        fields = ('id', 'user', 'city')
         depth = 1
 
 
