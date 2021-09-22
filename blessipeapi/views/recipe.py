@@ -59,7 +59,7 @@ class RecipeView(ViewSet):
         # JSON as a response to the client request
         try:
             recipe.save()
-            recipe.keywords.set(request.data["keywords"])
+            # recipe.keywords.set([])
 
             serializer = RecipeSerializer(recipe, context={'request': request})
             return Response(serializer.data)
@@ -129,7 +129,7 @@ class RecipeView(ViewSet):
             recipe.image = data
 
         recipe.save()
-        recipe.keywords.set(request.data["keywords"])
+        # recipe.keywords.set(request.data["keywords"])
 
         # 204 status code means everything worked but the
         # server is not sending back any data in the response
@@ -194,6 +194,9 @@ class RecipeView(ViewSet):
                     keywords__word__in=words,
                     city=traveler.city).distinct()
 
+                # search_words.order_by(hits.annotate(
+                #         count=Count('WHAT WERE SEARCHING FOR')))
+
                 # Destructured list gets passed in to the __in filter, returning only restaurants with a match.
                 # Lastly, filter the filtered list to return only restaurants in the city = traveler.city
                 # Could you set a minimum match limit? Hannah says no.
@@ -236,33 +239,6 @@ class RecipeTravelerSerializer(serializers.ModelSerializer):
         fields = ('id', 'user', 'city')
         depth = 1
 
-
-# class RestaurantCitySerializer(serializers.ModelSerializer):
-#     """Get more info about the restaurant
-
-#     Arguments:
-#         serializer type
-#     """
-
-#     class Meta:
-#         model = City
-#         fields = all
-#         depth = 1
-
-
-# class RecipeRestaurantSerializer(serializers.ModelSerializer):
-#     """Get more info about the restaurant
-
-#     Arguments:
-#         serializer type
-#     """
-
-#     city = RestaurantCitySerializer(many=False)
-
-#     class Meta:
-#         model = Restaurant
-#         fields = ('id', 'name', 'address', 'city')
-#         depth = 2
 
 class RecipeKeywordSerializer(serializers.ModelSerializer):
     """Return keywords on a recipe!"""

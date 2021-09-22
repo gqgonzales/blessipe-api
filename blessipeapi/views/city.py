@@ -1,7 +1,8 @@
 """View module for handling requests about cities"""
 from django.core.exceptions import ValidationError
-from rest_framework import status
+from rest_framework import permissions, status
 from django.http import HttpResponseServerError
+# from rest_framework.decorators import api_view, permission_classes
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
@@ -11,6 +12,21 @@ from blessipeapi.models import City, Country
 
 class CityView(ViewSet):
     """Blessipe city viewset"""
+
+    permission_classes = [permissions.AllowAny]
+
+    def list(self, request):
+        """Handle GET requests to cities resource
+
+            Returns:
+                Response -- JSON serialized list of cities
+            """
+        # Get all city records from the database
+        cities = City.objects.all()
+
+        serializer = RestaurantSerializer(
+            cities, many=True, context={'request': request})
+        return Response(serializer.data)
 
     def create(self, request):
         """Handle POST operations
@@ -101,30 +117,6 @@ class CityView(ViewSet):
 
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-    def list(self, request):
-        """Handle GET requests to cities resource
-
-        Returns:
-            Response -- JSON serialized list of cities
-        """
-        # Get all city records from the database
-        cities = City.objects.all()
-
-        # Support filtering cities by traveler
-        #    http://localhost:8000/cities?traveler=1
-        #
-        # That URL will retrieve all tabletop cities
-        # traveler = self.request.query_params.get('traveler', None)
-        # if traveler is not None:
-        #     cities = cities.filter(traveler__id=traveler)
-        #  This dunderscored id is acting kind of like a join table WHERE statement
-
-        serializer = RestaurantSerializer(
-            cities, many=True, context={'request': request})
-        return Response(serializer.data)
-
-# The serializer class determines how the Python data should be serialized as JSON to be sent back to the client.
 
 
 class RestaurantSerializer(serializers.ModelSerializer):
