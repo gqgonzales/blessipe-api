@@ -6,6 +6,13 @@ name = "pypi"
 [packages]
 django-phonenumber-field = "*"
 pillow = "*"
+pylint = "*"
+django = "*"
+autopep8 = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+pylint-django = "*"
+phonenumbers = "*"
 
 [dev-packages]
 

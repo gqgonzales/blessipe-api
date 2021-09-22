@@ -11,6 +11,8 @@ class Restaurant(models.Model):
     url = models.URLField()
     city = models.ForeignKey(
         "City", on_delete=models.CASCADE)
+    keywords = models.ManyToManyField(
+        "Keyword", through="RestaurantKeyword", related_name="restaurant_keywords", blank=True)
 
     def __str__(self):
         return f'{self.name} in {self.city.name}'
