@@ -178,10 +178,9 @@ class RestaurantSerializer(serializers.ModelSerializer):
         serializer type
     """
 
-    # keywords = RestaurantKeywordSerializer(many=True)
 
     class Meta:
         model = Restaurant
         fields = ('id', 'name', 'address', 'phone_number',
                   'url', 'city', 'keywords', 'super_fans', 'favorited')
-        depth = 2
+        depth = 1
