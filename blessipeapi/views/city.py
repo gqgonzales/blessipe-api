@@ -24,7 +24,7 @@ class CityView(ViewSet):
         # Get all city records from the database
         cities = City.objects.all()
 
-        serializer = RestaurantSerializer(
+        serializer = CitySerializer(
             cities, many=True, context={'request': request})
         return Response(serializer.data)
 
@@ -51,7 +51,7 @@ class CityView(ViewSet):
         # JSON as a response to the client request
         try:
             city.save()
-            serializer = RestaurantSerializer(
+            serializer = CitySerializer(
                 city, context={'request': request})
             return Response(serializer.data)
 
@@ -74,7 +74,7 @@ class CityView(ViewSet):
             #
             # The `2` at the end of the route becomes `pk`
             city = City.objects.get(pk=pk)
-            serializer = RestaurantSerializer(
+            serializer = CitySerializer(
                 city, context={'request': request})
             return Response(serializer.data)
         except City.DoesNotExist as ex:
@@ -119,7 +119,7 @@ class CityView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-class RestaurantSerializer(serializers.ModelSerializer):
+class CitySerializer(serializers.ModelSerializer):
     """JSON serializer for cities
 
     Arguments:

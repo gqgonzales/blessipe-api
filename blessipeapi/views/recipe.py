@@ -12,7 +12,7 @@ from rest_framework import status
 from rest_framework.decorators import action
 from django.db.models import Case, When
 from django.db.models.fields import BooleanField
-from blessipeapi.models import Recipe, Traveler, Restaurant, RecipeKeyword, Keyword
+from blessipeapi.models import Recipe, Traveler, Restaurant, RecipeKeyword, Keyword, City
 from blessipeapi.views.restaurant import RestaurantSerializer
 from django.contrib.auth.models import User
 import uuid
@@ -167,7 +167,7 @@ class RecipeView(ViewSet):
                 default=False,
                 output_field=BooleanField()
             ))
-        # .filter(traveler=traveler)
+
         keywords = self.request.query_params.get('type', None)
         if keywords is not None:
             recipes = recipes.filter(keyword__id=keywords)
@@ -223,7 +223,7 @@ class RecipeUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'first_name', 'last_name')
-        # depth = 1
+        depth = 1
 
 
 class RecipeTravelerSerializer(serializers.ModelSerializer):
@@ -238,7 +238,15 @@ class RecipeTravelerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Traveler
         fields = ('id', 'user', 'city')
-        # depth = 1
+        depth = 1
+
+
+class CitySerializer(serializers.ModelSerializer):
+    """Returns necessary city / country information"""
+    class Meta:
+        model = City
+        fields = "__all__"
+        depth = 1
 
 
 class RecipeKeywordSerializer(serializers.ModelSerializer):

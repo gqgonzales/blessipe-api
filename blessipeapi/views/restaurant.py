@@ -1,4 +1,5 @@
 """View module for handling requests about restaurants"""
+from blessipeapi.models import city
 from blessipeapi.models.city import City
 from django.core.exceptions import ValidationError
 from rest_framework import status
@@ -11,7 +12,8 @@ from rest_framework.decorators import action
 from django.db.models import Case, When
 from django.db.models.fields import BooleanField
 from blessipeapi.views.traveler import TravelerSerializer
-from blessipeapi.models import Restaurant, Traveler, City, RestaurantKeyword, restaurant, traveler
+from blessipeapi.views.city import CitySerializer
+from blessipeapi.models import Restaurant, Traveler, City, RestaurantKeyword, restaurant, traveler, Favorite
 
 
 class RestaurantView(ViewSet):
@@ -161,6 +163,47 @@ class RestaurantView(ViewSet):
             except Exception as ex:
                 return Response({'message': ex.args[0]})
 
+    # @ action(methods=['get'], detail=True)
+    # def favorites(self, request, pk=None):
+    #     """Only return restaurants that have been favorited by current traveler"""
+
+    #     if request.method == "GET":
+    #         try:
+    #             traveler = Traveler.objects.get(user=request.auth.user, pk=pk)
+
+    #             restaurants = Restaurant.objects.all()
+
+    #             favorites_list = Favorite.objects.filter(traveler=traveler)
+    #             if len(favorites_list) > 0:
+    #                 for favorites in favorites_list:
+    #                     restaurants = Restaurant.objects.filter(
+    #                         pk=favorites.restaurant.id)
+
+                # restaurants = restaurants.filter()
+
+                # for restaurant in restaurants:
+
+                #     restaurant.favorited = traveler in restaurant.super_fans.all()
+
+                #         only_favorites = Restaurant.objects.filter()
+
+                # for restaurant in restaurants:
+                #     restaurant.favorited = traveler in restaurant.super_fans.all()
+
+                # restaurants = Restaurant.objects.filter(favorited=True)
+
+                # restaurants = Restaurant.objects.annotate(
+                #     favorited=traveler in restaurant.super_fans.all()).filter(favorited=True)
+
+        #     except Restaurant.DoesNotExist:
+        #         return Response(
+        #             {'message': 'Restaurant does not exist.'},
+        #             status=status.HTTP_400_BAD_REQUEST
+        #         )
+
+        # serializer = RestaurantSerializer(
+        #     restaurants, many=True, context={'request': request})
+        # return Response(serializer.data)
 # The serializer class determines how the Python data should be serialized as JSON to be sent back to the client.
 
 
@@ -171,6 +214,14 @@ class RestaurantKeywordSerializer(serializers.ModelSerializer):
     fields = 'word'
 
 
+class CitySerializer(serializers.ModelSerializer):
+    """Returns necessary city / country information"""
+    class Meta:
+        model = City
+        fields = "__all__"
+        depth = 1
+
+
 class RestaurantSerializer(serializers.ModelSerializer):
     """JSON serializer for restaurants
 
@@ -178,6 +229,7 @@ class RestaurantSerializer(serializers.ModelSerializer):
         serializer type
     """
 
+    city = CitySerializer(many=False)
 
     class Meta:
         model = Restaurant
