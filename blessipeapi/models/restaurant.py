@@ -13,6 +13,16 @@ class Restaurant(models.Model):
         "City", on_delete=models.CASCADE)
     keywords = models.ManyToManyField(
         "Keyword", through="RestaurantKeyword", related_name="restaurant_keywords", blank=True)
+    super_fans = models.ManyToManyField(
+        "Traveler", through="Favorite", related_name="favorited")
+
+    @property
+    def favorited(self):
+        return self.__favorited
+
+    @favorited.setter
+    def favorited(self, value):
+        self.__favorited = value
 
     def __str__(self):
         return f'{self.name} in {self.city.name}'

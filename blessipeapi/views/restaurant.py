@@ -7,7 +7,11 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from blessipeapi.models import Restaurant, Traveler, City, RestaurantKeyword
+from rest_framework.decorators import action
+from django.db.models import Case, When
+from django.db.models.fields import BooleanField
+from blessipeapi.views.traveler import TravelerSerializer
+from blessipeapi.models import Restaurant, Traveler, City, RestaurantKeyword, restaurant, traveler
 
 
 class RestaurantView(ViewSet):
@@ -115,8 +119,11 @@ class RestaurantView(ViewSet):
         Returns:
             Response -- JSON serialized list of restaurants
         """
-        # Get all restaurant records from the database
+        traveler = Traveler.objects.get(user=request.auth.user)
         restaurants = Restaurant.objects.all()
+
+        for restaurant in restaurants:
+            restaurant.favorited = traveler in restaurant.super_fans.all()
 
         keywords = self.request.query_params.get('type', None)
         if keywords is not None:
@@ -126,8 +133,33 @@ class RestaurantView(ViewSet):
             restaurants, many=True, context={'request': request})
         return Response(serializer.data)
 
-    # Maybe a custom action for matching?
-    # RestaurantKeyword.objects.get(word__contains='sushi')
+    @ action(methods=['post', 'delete'], detail=True)
+    def favorite_restaurant(self, request, pk=None):
+        """Managing favoriting a restaurant"""
+        traveler = Traveler.objects.get(user=request.auth.user)
+
+        try:
+            restaurant = Restaurant.objects.get(pk=pk)
+        except Restaurant.DoesNotExist:
+            return Response(
+                {'message': 'Restaurant does not exist.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        if request.method == "POST":
+            try:
+                restaurant.super_fans.add(traveler)
+                return Response({}, status=status.HTTP_201_CREATED)
+            except Exception as ex:
+                return Response({'message': ex.args[0]})
+
+        # User wants to unfavorite a restaurant
+        elif request.method == "DELETE":
+            try:
+                restaurant.super_fans.remove(traveler)
+                return Response(None, status=status.HTTP_204_NO_CONTENT)
+            except Exception as ex:
+                return Response({'message': ex.args[0]})
 
 # The serializer class determines how the Python data should be serialized as JSON to be sent back to the client.
 
@@ -146,10 +178,9 @@ class RestaurantSerializer(serializers.ModelSerializer):
         serializer type
     """
 
-    # keywords = RestaurantKeywordSerializer(many=True)
 
     class Meta:
         model = Restaurant
         fields = ('id', 'name', 'address', 'phone_number',
-                  'url', 'city', 'keywords')
-        depth = 2
+                  'url', 'city', 'keywords', 'super_fans', 'favorited')
+        depth = 1

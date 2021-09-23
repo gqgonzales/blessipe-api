@@ -11,8 +11,8 @@ from rest_framework import serializers
 from rest_framework import status
 from rest_framework.decorators import action
 from django.db.models import Case, When
-from django.db.models.fields import BooleanField, NullBooleanField
-from blessipeapi.models import Recipe, Traveler, Restaurant, City, RecipeKeyword, Keyword
+from django.db.models.fields import BooleanField
+from blessipeapi.models import Recipe, Traveler, Restaurant, RecipeKeyword, Keyword
 from blessipeapi.views.restaurant import RestaurantSerializer
 from django.contrib.auth.models import User
 import uuid
@@ -187,14 +187,17 @@ class RecipeView(ViewSet):
             try:
 
                 recipe = Recipe.objects.get(pk=pk)
+
                 # Need to destructure list of current recipe's keyword list. Just want the strings.
                 words = [kw.word for kw in recipe.keywords.all()]
 
-                search_words = Restaurant.objects.filter(
+                matched_results = Restaurant.objects.filter(
                     keywords__word__in=words,
                     city=traveler.city).distinct()
 
-                # search_words.order_by(hits.annotate(
+                for restaurant in matched_results:
+                    restaurant.favorited = traveler in restaurant.super_fans.all()
+                # matched_results.order_by(hits.annotate(
                 #         count=Count('WHAT WERE SEARCHING FOR')))
 
                 # Destructured list gets passed in to the __in filter, returning only restaurants with a match.
@@ -203,14 +206,12 @@ class RecipeView(ViewSet):
                 # Could we order_by() the number of successful matches?
 
                 serializer = RestaurantSerializer(
-                    search_words, context={'request': request}, many=True)
+                    matched_results, context={'request': request}, many=True)
                 return Response(serializer.data)
             except Restaurant.DoesNotExist as ex:
                 return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
             except Exception as ex:
                 return HttpResponseServerError(ex)
-
-# The serializer class determines how the Python data should be serialized as JSON to be sent back to the client.
 
 
 class RecipeUserSerializer(serializers.ModelSerializer):
@@ -222,7 +223,7 @@ class RecipeUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'first_name', 'last_name')
-        depth = 1
+        # depth = 1
 
 
 class RecipeTravelerSerializer(serializers.ModelSerializer):
@@ -237,7 +238,7 @@ class RecipeTravelerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Traveler
         fields = ('id', 'user', 'city')
-        depth = 1
+        # depth = 1
 
 
 class RecipeKeywordSerializer(serializers.ModelSerializer):
@@ -255,7 +256,6 @@ class RecipeSerializer(serializers.ModelSerializer):
     """
 
     traveler = RecipeTravelerSerializer(many=False)
-    # keywords = RecipeKeywordSerializer(many=True)
 
     class Meta:
         model = Recipe
