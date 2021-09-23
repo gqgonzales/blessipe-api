@@ -4,11 +4,11 @@
     "pk": 1,
     "fields": {
       "restaurant": 1,
-      "traveler": 2,
-      "name": "Crispy Rice with Spicy Tuna",
-      "description": "Heaven on earth. Perfectly browned sushi rice lays as the bed for a tangy and flavorful bite of that famous katsu-ya spicy tuna. Finished with a tiny slice of jalapeño.",
-      "date": "2018-03-25",
-      "image": "recipeimages/crst.jpeg"
+      "traveler": 3,
+      "name": "Pork Tonkotsu Ramen",
+      "description": "Back in the home town with the boys, some of which I hadn't seen since high school. Everybody had changed in a lot of ways: new hair, clothes, wrinkles. In a lot of others, it was just like being back home. This might have also been the best ramen I've ever eaten.",
+      "date": "2020-03-25",
+      "image": "recipeimages/IMG_0364.jpg"
     }
   },
   {

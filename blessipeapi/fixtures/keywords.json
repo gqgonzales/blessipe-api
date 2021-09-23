@@ -495,5 +495,26 @@
     "fields": {
       "word": "mussels"
     }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 71,
+    "fields": {
+      "word": "tonkotsu"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 72,
+    "fields": {
+      "word": "pork"
+    }
+  },
+  {
+    "model": "blessipeapi.keyword",
+    "pk": 73,
+    "fields": {
+      "word": "woodear"
+    }
   }
 ]
