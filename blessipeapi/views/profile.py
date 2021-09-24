@@ -51,4 +51,5 @@ class TravelSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Traveler
-        fields = ('id', 'user', 'bio', 'full_name')
+        fields = ('id', 'user', 'bio', 'full_name', 'city')
+        depth = 1
