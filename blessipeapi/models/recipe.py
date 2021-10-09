@@ -9,6 +9,7 @@ class Recipe(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=300)
     date = models.DateField()
+    is_public = models.BooleanField(required=False)
     image = models.ImageField(upload_to='recipeimages', height_field=None,
                               width_field=None, max_length=None, null=True)
     keywords = models.ManyToManyField(

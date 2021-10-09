@@ -8,6 +8,7 @@
       "name": "Pork Tonkotsu Ramen",
       "description": "Back in the home town with the boys, some of which I hadn't seen since high school. Everybody had changed in a lot of ways: new hair, clothes, wrinkles. In a lot of others, it was just like being back home. This might have also been the best ramen I've ever eaten.",
       "date": "2020-03-25",
+      "is_public": true,
       "image": "recipeimages/IMG_0364.jpg"
     }
   },
@@ -20,6 +21,7 @@
       "name": "Svið",
       "description": "Sheep's face: boiled, brain removed, and tenderized. Served with mashed potatoes. Delicious, in a gamey sort of way.",
       "date": "2017-03-04",
+      "is_public": true,
       "image": "recipeimages/sheeps_face.jpeg"
     }
   },
@@ -32,6 +34,7 @@
       "name": "Polenta & Eggs",
       "description": "My first time eating polenta! It almost reminded me of a savory cornbread. Served with an amazing chimichurri sauce, bacon, and spinach.",
       "date": "2019-02-08",
+      "is_public": true,
       "image": "recipeimages/polenta-eggs.jpeg"
     }
   },
@@ -44,6 +47,7 @@
       "name": "Red Snapper",
       "description": "I am not a fish-person, or a person who regularly eats, tries, or enjoys fish: but I tried this while on vacation and didn't hate it! In fact, I think I'd try it again. I wonder if there is anywhere in town I can try this 'snapper' again!",
       "date": "2021-06-11",
+      "is_public": true,
       "image": "recipeimages/1adddce9-6e12-4163-8e74-02fdc2dc8c62.jpeg"
     }
   },
@@ -56,6 +60,7 @@
       "name": "English Breakfast",
       "description": "Blown away and knocked on my arse after my first full English Breakfast. This was the start of an amazing trip for my family and I. We couldn't eat until sundown, but it was delicious and memorable. The black pudding espcially was a standout.",
       "date": "2019-07-20",
+      "is_public": true,
       "image": "recipeimages/english-brekkie.jpeg"
     }
   },
@@ -68,6 +73,7 @@
       "name": "Milanesa",
       "description": "Think I could legit eat this every day. Would always go here after class with Sophia and Chucky.",
       "date": "2018-02-03",
+      "is_public": true,
       "image": "recipeimages/club-de-milanesa.jpeg"
     }
   },
@@ -80,6 +86,7 @@
       "name": "Summer Bean Cassoulet",
       "description": "This was our third anniversary and we wanted to try as many things from the menu as possible. Paige didn't want to even order this one, but we were both floored by the texture and lightness of the dish. Delicious, dressed up with some higher quality meats; still very accesible. Wanted to take another order home for lunch the next day!",
       "date": "2019-07-07",
+      "is_public": true,
       "image": "recipeimages/summer-bean-cassoulet.jpeg"
     }
   },
@@ -92,6 +99,7 @@
       "name": "Paella",
       "description": "My friend Courtney begged me to try hers and I fell in love instantly. So many competing flavors but there was something so comforting about it. We tried Paella from almost every spot we went to that semester, but this palce was the first (and the best).",
       "date": "2017-11-12",
+      "is_public": false,
       "image": "recipeimages/paella_1.jpeg"
     }
   }
