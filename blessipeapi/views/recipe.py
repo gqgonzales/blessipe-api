@@ -2,7 +2,6 @@
 from django.core.files.base import ContentFile
 import base64
 from django.core.exceptions import ValidationError
-from django.db.models.expressions import OrderBy
 from rest_framework import status
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
@@ -38,6 +37,7 @@ class RecipeView(ViewSet):
         recipe.name = request.data["name"]
         recipe.description = request.data["description"]
         recipe.date = request.data["date"]
+        recipe.is_public = request.data["isPublic"]
         recipe.traveler = traveler
 
         # Use the Django ORM to get the record from the database
@@ -113,21 +113,25 @@ class RecipeView(ViewSet):
         recipe.name = request.data["name"]
         recipe.description = request.data["description"]
         recipe.date = request.data["date"]
+        recipe.is_public = request.data["isPublic"]
+
         recipe.traveler = traveler
 
         restaurant = Restaurant.objects.get(pk=request.data["restaurant"])
         recipe.restaurant = restaurant
 
-        image_splitter = request.data["image"].split("/")
-        if image_splitter[0] == "http:":
-            pass
+        if request.data["image"] is not None:
+            image_splitter = request.data["image"].split("/")
+            if image_splitter[0] == "http:":
+                pass
+            else:
+                format, imgstr = request.data["image"].split(';base64,')
+                ext = format.split('/')[-1]
+                data = ContentFile(base64.b64decode(imgstr),
+                                   name=f'{uuid.uuid4()}.{ext}')
+                recipe.image = data
         else:
-            format, imgstr = request.data["image"].split(';base64,')
-            ext = format.split('/')[-1]
-            data = ContentFile(base64.b64decode(imgstr),
-                               name=f'{uuid.uuid4()}.{ext}')
-            recipe.image = data
-
+            recipe.image = None
         recipe.save()
         # recipe.keywords.set(request.data["keywords"])
 
@@ -268,5 +272,5 @@ class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
         fields = ('id', 'name', 'description', 'date',
-                  'restaurant', 'traveler', 'author', 'image', 'keywords')
+                  'restaurant', 'traveler', 'author', 'is_public', 'image', 'keywords')
         depth = 2
