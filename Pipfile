@@ -13,6 +13,9 @@ djangorestframework = "*"
 django-cors-headers = "*"
 pylint-django = "*"
 phonenumbers = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
