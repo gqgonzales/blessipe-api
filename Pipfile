@@ -13,6 +13,8 @@ djangorestframework = "*"
 django-cors-headers = "*"
 pylint-django = "*"
 phonenumbers = "*"
+gunicorn = "*"
+django-on-heroku = "*"
 
 [dev-packages]
 
