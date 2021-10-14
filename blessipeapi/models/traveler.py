@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Traveler(models.Model):
     """initializing the traveler module"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bio = models.CharField(max_length=80)
+    bio = models.CharField(max_length=300)
     city = models.ForeignKey("City", on_delete=models.CASCADE, null=True)
 
     @property
