@@ -14,6 +14,3 @@ python manage.py loaddata recipes
 python manage.py loaddata keywords
 python manage.py loaddata recipe_keywords
 python manage.py loaddata restaurant_keywords
-
-
-

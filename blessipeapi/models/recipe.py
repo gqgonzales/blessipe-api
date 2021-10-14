@@ -7,7 +7,7 @@ class Recipe(models.Model):
     traveler = models.ForeignKey(
         "Traveler", on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
+    description = models.CharField(max_length=800)
     date = models.DateField()
     is_public = models.BooleanField()
     image = models.ImageField(upload_to='recipeimages', height_field=None,
